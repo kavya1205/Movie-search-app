@@ -1,7 +1,6 @@
 import React from "react";
 import "./MovieCards.css"
 const MovieCards = ({movieList})=>{
-console.log("movie cards component",movieList)
     return(
         <>
         {/* <p>{movieList.map(d => d.original_title)}</p> */}
