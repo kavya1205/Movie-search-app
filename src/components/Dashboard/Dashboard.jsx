@@ -5,12 +5,13 @@ import "./Dashboard.css";
 const Dashboard = () => {
   const [movieList, setMovieList] = useState([]);
   const [searchedValue, setSearchedValue] = useState("");
-
+const apiKey = import.meta.env.VITE_API_KEY
+console.log("import.meta.env",import.meta)
   const { isPending, error, data } = useQuery({
     queryKey: ["movies-list"],
     queryFn: () =>
       fetch(
-        "https://api.themoviedb.org/3/movie/popular?api_key=ca7d605fdfb23f314b8d71d185209d56"
+        `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
       ).then((res) => res.json()),
     //.then(d=>setMovieList(d))
   });
