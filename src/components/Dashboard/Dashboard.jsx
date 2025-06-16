@@ -6,7 +6,6 @@ const Dashboard = () => {
   const [movieList, setMovieList] = useState([]);
   const [searchedValue, setSearchedValue] = useState("");
 const apiKey = import.meta.env.VITE_API_KEY
-console.log("import.meta.env",import.meta)
   const { isPending, error, data } = useQuery({
     queryKey: ["movies-list"],
     queryFn: () =>
