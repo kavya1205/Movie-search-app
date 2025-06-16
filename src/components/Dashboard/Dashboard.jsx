@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import MovieCards from '../MovieCards/MovieCards';
 import { useQuery } from '@tanstack/react-query';
-
+import "./Dashboard.css"
 const Dashboard = ()=>{
     const [movieList, setMovieList]=useState([]);
 
@@ -16,9 +16,11 @@ const Dashboard = ()=>{
 
     return(
         <>
-        <h2>Movies List</h2>
-
+        <div>
+        <h2 className='section-title'>Movies List</h2>
+        
         <MovieCards movieList={movieList?.results || []}/>
+        </div>
         </>
     )
 }
